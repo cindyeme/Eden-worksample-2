@@ -8,12 +8,42 @@
     <link rel="stylesheet" href="/assets/css/global.css" />
   </head>
   <body>
-    <main class="flex items-center justify-center">
+    <main class="flex items-center justify-center confetti-container">
       <div class="wrapper">
-        <img src="/assets/images/emoji.svg" class="img-fluid emoji" alt="Star struck emoji" />
+        <img
+          src="/assets/images/emoji.svg"
+          class="img-fluid emoji"
+          alt="Star struck emoji"
+        />
+        <div class="flex flex-col gap-1">
+          <h1 class="h1">Your Eden profile has been completed, Aderinsola!</h1>
+          <h5 class="h5">
+            You’re one step closer to starting your easy life with Eden.
+          </h5>
+          <div class="btn-wrapper">
+            <a href="index.html" class="btn">Go Home</a>
+          </div>
+        </div>
       </div>
     </main>
     <script src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get container element
+        const confettiContainer = document.querySelector(".confetti-container");
+
+        // Configure and initialize the confetti
+        party.confetti(confettiContainer, {
+          shapes: ["square"],
+          count: party.variation.range(50, 300),
+          speed: party.variation.range(0, 1500),
+          spread: 0,
+          // zIndex: 99999,
+          angle: 180,
+        });
+      });
+    </script>
   </body>
 </html>

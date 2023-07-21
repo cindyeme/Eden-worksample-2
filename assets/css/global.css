@@ -1,17 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap");
 
-:root{
-  --primary: #03A84E;
-  --darker: #0F241B;
-  --dark: #1D352A;
-  --white: #FFFFFF;
-  --Serif: 'PT Serif', san-serif;
+:root {
+  --primary: #03a84e;
+  --grey-primary: #0f241b;
+  --grey-secondary: #1d352a;
+  --white: #ffffff;
+  --Serif: "PT Serif", san-serif;
+  --Sans: "PT Sans", san-serif;
+  --font-400: 400;
+  --font-700: 700;
 }
 
-*,*::before,*::after{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-body{
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -28,7 +33,10 @@ body{
   flex-direction: column;
 }
 .gap-4 {
-  gap: 1rem/* 16px */;
+  gap: 1rem /* 16px */;
+}
+.gap-1 {
+  gap: 0.7rem /* 16px */;
 }
 .items-center {
   align-items: center;
@@ -36,9 +44,69 @@ body{
 .justify-center {
   justify-content: center;
 }
-.wrapper{
+.confetti-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* pointer-events: none; */
+}
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  padding: 1.5rem;
+  /* z-index: 99999; */
+  /* position: relative; */
+}
+.emoji {
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+}
+.h1 {
+  color: var(--grey-primary);
+  text-align: center;
+  font-family: var(--Serif);
+  font-size: 1.25rem;
+  font-weight: var(--font-700);
+  line-height: 2rem;
+  margin: 0;
+}
+.h5 {
+  color: var(--grey-secondary);
+  text-align: center;
+  font-family: var(--Sans);
+  font-size: 1rem;
+  font-weight: var(--font-400);
+  line-height: 1.5rem;
+  margin: 0;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.btn {
+  width: 20.4375rem;
+  height: 3rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 2rem;
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  font-family: var(--Sans);
+  font-size: 1rem;
+  font-weight: var(--font-400);
+  text-decoration: none;
+}
+@media(max-width: 428px){
+  .btn{
+    width: 100%;
+  }
 }
