@@ -62,11 +62,23 @@ a {
 .gap-1 {
   gap: 0.7rem /* 16px */;
 }
+.gap-2 {
+  gap: 0.85rem /* 16px */;
+}
 .gap-05 {
   gap: 0.5rem;
 }
 .gap-7 {
   gap: 1.75rem;
+}
+.gap-8 {
+  gap: 2.5rem;
+}
+.gap-08 {
+  gap: 3.2rem;
+}
+.gap-9 {
+  gap: 4.5rem;
 }
 .gap-12 {
   gap: 5.5rem;
@@ -92,6 +104,9 @@ a {
 }
 .items-center {
   align-items: center;
+}
+.items-start {
+  align-items: flex-start;
 }
 .justify-center {
   justify-content: center;
@@ -207,6 +222,12 @@ a {
 }
 .mb-4 {
   margin-bottom: 1rem;
+}
+.mt-05 {
+  margin-top: 0.3rem;
+}
+.mt-1 {
+  margin-top: 0.5rem;
 }
 .mt-2 {
   margin-top: 0.8rem;
@@ -427,12 +448,15 @@ button:focus {
 .hr-quinary {
   border: 0.5px solid var(--grey-quinary);
 }
+.hr-dotted {
+  border: 0.5px dashed var(--grey-quinary);
+}
 .time-icon {
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
 }
-.main{
+.main {
   margin: auto;
   max-width: 640px;
 }
@@ -451,6 +475,7 @@ button:focus {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 999;
 }
 .nav-icon {
   width: 1.125rem;
@@ -553,4 +578,69 @@ input:focus {
   .form-control {
     width: 12.8125rem;
   }
+}
+
+/* Modal */
+.modal-wrapper {
+  border-radius: 1rem;
+  background: var(--white);
+  padding: 1.2rem 1rem;
+}
+.close-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+}
+.food-phic,
+.house-phic {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+.delivery-card {
+  display: inline-flex;
+  padding: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.375rem;
+  border-radius: 0.5rem;
+  border: 1px dashed var(--grey-quinary);
+  background: #fff;
+}
+.delivery-progress-dot-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+.delivery-progress-tick-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+}
+.delivery-line {
+  width: 0.0625rem;
+  border: 0.5px dashed var(--primary);
+  border-radius: 1.5rem;
+  transition: width 0.3s ease-in-out;
+}
+.d-0{
+  top: 15px;
+  height: 5rem;
+}
+.d-1,.d-2,.d-3{
+  height: 3.25rem;
+}
+.d-1{
+  top: 28px;
+}
+.d-2{
+  top: 106px;
+}
+.d-3{
+  top: 185px;
+}
+.close{
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 }
