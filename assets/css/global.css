@@ -36,7 +36,7 @@ body {
   height: 100vh;
   position: relative;
 }
-a{
+a {
   text-decoration: none;
 }
 .img-fluid {
@@ -318,8 +318,13 @@ a{
 .hr-orange {
   border: 1px solid rgba(255, 218, 159, 0.5);
 }
+.time-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
 @media (min-width: 768px) {
-  .services {
+  .main {
     max-width: 640px;
     margin: auto;
   }
