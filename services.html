@@ -48,7 +48,9 @@
       <div class="services-wrapper flex flex-col gap-04">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-1">
-            <img src="/assets/images/hamburger.svg" alt="Menu" />
+            <a href="index.html"
+              ><img src="/assets/images/hamburger.svg" alt="Menu"
+            /></a>
             <h4 class="h4">Hi, Aderinsola!</h4>
           </div>
           <img
@@ -80,7 +82,7 @@
                 alt="Mini dish"
               />
             </div>
-            <div class="status c-pointer status-primary">
+            <div onclick="openModal(1)" class="status c-pointer status-primary">
               <div class="text-sxm text-primary">View Status</div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +137,7 @@
                 alt="Mini house"
               />
             </div>
-            <div class="status c-pointer status-orange">
+            <div onclick="openModal(2)" class="status c-pointer status-orange">
               <div class="text-sxm text-orange-primary">View Status</div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -169,74 +171,77 @@
           </div>
         </div>
 
-        <!-- Modal -->
-        <div class="modal-wrapper" id="foodDeliveryModal">
-          <div class="flex flex-col gap-04">
-            <div class="flex justify-between items-center">
-              <div class="text-sxm text-tertiary">Mon, 08 Sep 2021</div>
-              <button type="button" class="close">
-                <img
-                  src="/assets/images/close.svg"
-                  alt="Close"
-                  class="img-fluid close-icon"
-                />
-              </button>
-            </div>
-
-            <div class="flex items-center gap-2">
-              <img
-                src="assets/images/mini-dish-1.svg"
-                alt="Food"
-                class="img-fluid food-phic"
-              />
-              <div class="flex flex-col gap-">
-                <div class="text-tertiary text-sxm">Order Status</div>
-                <div class="text-md text-grey-primary">Order has arrived</div>
+        <!-- Modals -->
+        <!-- food delivery -->
+        <div class="overlay" id="modalOverlay1">
+          <div class="modal-wrapper mw-1" id="modal1">
+            <div class="flex flex-col gap-04">
+              <div class="flex justify-between items-center">
+                <div class="text-sxm text-tertiary">Mon, 08 Sep 2021</div>
+                <button type="button" onclick="closeModal(1)" class="close">
+                  <img
+                    src="/assets/images/close.svg"
+                    alt="Close"
+                    class="img-fluid close-icon"
+                  />
+                </button>
               </div>
-            </div>
 
-            <div class="delivery-card">
-              <div class="text-sxm text-tertiary">Delivery Address</div>
-              <div class="text-sm text-grey-primary">
-                No 6B, Radiators Spring, Lightning Estate, Lagos, Nigeria.
-              </div>
-            </div>
-
-            <div class="relative flex gap-1 mt-4">
-              <div class="flex flex-col gap-9 items-center mt-05 relative">
+              <div class="flex items-center gap-2">
                 <img
-                  src="assets/images/dot.svg"
-                  alt="Dot"
-                  class="img-fluid delivery-progress-dot-icon"
+                  src="assets/images/mini-dish-1.svg"
+                  alt="Food"
+                  class="img-fluid food-phic"
                 />
-                <div class="delivery-line d-0 absolute"></div>
-                <img
-                  src="assets/images/tick-check.svg"
-                  alt="Dot"
-                  class="img-fluid delivery-progress-tick-icon"
-                />
-              </div>
-              <div class="flex flex-col gap-8 w-full">
-                <div class="flex flex-col gap-05 w-full">
-                  <div class="flex items-center justify-between">
-                    <div class="text-md text-grey-primary">
-                      Order has arrived
-                    </div>
-                    <div class="text-tertiary text-sxm">10:56 AM</div>
-                  </div>
-                  <div class="text-tertiary text-sm">
-                    Your order has arrived at your location. Pick it up!
-                  </div>
+                <div class="flex flex-col gap-">
+                  <div class="text-tertiary text-sxm">Order Status</div>
+                  <div class="text-md text-grey-primary">Order has arrived</div>
                 </div>
-                <div class="flex flex-col gap-05 w-full">
-                  <div class="flex items-center justify-between">
-                    <div class="text-md text-grey-primary">
-                      Order has arrived
+              </div>
+
+              <div class="delivery-card">
+                <div class="text-sxm text-tertiary">Delivery Address</div>
+                <div class="text-sm text-grey-primary">
+                  No 6B, Radiators Spring, Lightning Estate, Lagos, Nigeria.
+                </div>
+              </div>
+
+              <div class="relative flex gap-1 mt-4">
+                <div class="flex flex-col gap-9 items-center mt-05 relative">
+                  <img
+                    src="assets/images/dot.svg"
+                    alt="Dot"
+                    class="img-fluid delivery-progress-dot-icon"
+                  />
+                  <div class="delivery-line d-0 absolute"></div>
+                  <img
+                    src="assets/images/tick-check.svg"
+                    alt="Dot"
+                    class="img-fluid delivery-progress-tick-icon"
+                  />
+                </div>
+                <div class="flex flex-col gap-8 w-full">
+                  <div class="flex flex-col gap-05 w-full">
+                    <div class="flex items-center justify-between">
+                      <div class="text-md text-grey-primary">
+                        Order has arrived
+                      </div>
+                      <div class="text-tertiary text-sxm">10:56 AM</div>
                     </div>
-                    <div class="text-tertiary text-sxm">10:56 AM</div>
+                    <div class="text-tertiary text-sm">
+                      Your order has arrived at your location. Pick it up!
+                    </div>
                   </div>
-                  <div class="text-tertiary text-sm">
-                    Your order has arrived at your location. Pick it up!
+                  <div class="flex flex-col gap-05 w-full">
+                    <div class="flex items-center justify-between">
+                      <div class="text-md text-grey-primary">
+                        Order has arrived
+                      </div>
+                      <div class="text-tertiary text-sxm">10:56 AM</div>
+                    </div>
+                    <div class="text-tertiary text-sm">
+                      Your order has arrived at your location. Pick it up!
+                    </div>
                   </div>
                 </div>
               </div>
@@ -244,108 +249,113 @@
           </div>
         </div>
 
-        <div class="modal-wrapper" id="homeCleaningModal">
-          <div class="flex flex-col gap-04">
-            <div class="flex justify-between items-center">
-              <div class="text-sxm text-tertiary">Mon, 08 Sep 2021</div>
-              <button type="button" class="close">
-                <img
-                  src="/assets/images/close.svg"
-                  alt="Close"
-                  class="img-fluid close-icon"
-                />
-              </button>
-            </div>
-
-            <div class="flex items-center gap-2">
-              <img
-                src="assets/images/mini-house.svg"
-                alt="House"
-                class="img-fluid house-phic"
-              />
-              <div class="flex flex-col gap-">
-                <div class="text-tertiary text-sxm">Order Status</div>
-                <div class="text-md text-grey-primary">Cleaning completed</div>
+        <!-- home cleaning modal -->
+        <div class="overlay" id="modalOverlay2">
+          <div class="modal-wrapper mw-2" id="modal2">
+            <div class="flex flex-col gap-04">
+              <div class="flex justify-between items-center">
+                <div class="text-sxm text-tertiary">Mon, 08 Sep 2021</div>
+                <button type="button" onclick="closeModal(2)" class="close">
+                  <img
+                    src="/assets/images/close.svg"
+                    alt="Close"
+                    class="img-fluid close-icon"
+                  />
+                </button>
               </div>
-            </div>
 
-            <div class="delivery-card">
-              <div class="text-sxm text-tertiary">Cleaning Address</div>
-              <div class="text-sm text-grey-primary mb-1">
-                No 6B, Radiators Spring, Lightning Estate, Lagos, Nigeria.
-              </div>
-              <hr class="hr hr-dotted" />
-              <div class="text-sxm text-tertiary mt-2">Cleaner</div>
-              <div class="text-sm text-grey-primary">Kelechi Oguike</div>
-            </div>
-
-            <div class="relative flex gap-1 mt-4">
-              <div class="flex flex-col gap-08 items-center relative">
+              <div class="flex items-center gap-2">
                 <img
-                  src="assets/images/tick-check.svg"
-                  alt="Dot"
-                  class="img-fluid delivery-progress-tick-icon"
+                  src="assets/images/mini-house.svg"
+                  alt="House"
+                  class="img-fluid house-phic"
                 />
-                <div class="delivery-line d-1 absolute"></div>
-                <img
-                  src="assets/images/tick-check.svg"
-                  alt="Dot"
-                  class="img-fluid delivery-progress-tick-icon"
-                />
-                <div class="delivery-line d-2 absolute"></div>
-                <img
-                  src="assets/images/tick-check.svg"
-                  alt="Dot"
-                  class="img-fluid delivery-progress-tick-icon"
-                />
-                <div class="delivery-line d-3 absolute"></div>
-                <img
-                  src="assets/images/tick-check.svg"
-                  alt="Dot"
-                  class="img-fluid delivery-progress-tick-icon"
-                />
-              </div>
-              <div class="flex flex-col gap-7 w-full">
-                <div class="flex flex-col gap-05 w-full">
-                  <div class="flex items-center justify-between">
-                    <div class="text-md text-grey-primary">
-                      Cleaning completed
-                    </div>
-                    <div class="text-tertiary text-sxm">4:01 PM</div>
-                  </div>
-                  <div class="text-primary text-sm">Give feedback.</div>
-                </div>
-                <div class="flex flex-col gap-05 w-full">
-                  <div class="flex items-center justify-between">
-                    <div class="text-md text-grey-primary">
-                      Cleaning started
-                    </div>
-                    <div class="text-tertiary text-sxm">10:56 AM</div>
-                  </div>
-                  <div class="text-tertiary text-sm">
-                    Your cleaner has started cleaning.
+                <div class="flex flex-col gap-">
+                  <div class="text-tertiary text-sxm">Order Status</div>
+                  <div class="text-md text-grey-primary">
+                    Cleaning completed
                   </div>
                 </div>
-                <div class="flex flex-col gap-05 w-full">
-                  <div class="flex items-center justify-between">
-                    <div class="text-md text-grey-primary">
-                      Cleaner has arrived
-                    </div>
-                    <div class="text-tertiary text-sxm">2:26 PM</div>
-                  </div>
-                  <div class="text-tertiary text-sm">
-                    Your cleaner has arrived at your location.
-                  </div>
+              </div>
+
+              <div class="delivery-card">
+                <div class="text-sxm text-tertiary">Cleaning Address</div>
+                <div class="text-sm text-grey-primary mb-1">
+                  No 6B, Radiators Spring, Lightning Estate, Lagos, Nigeria.
                 </div>
-                <div class="flex flex-col gap-05 w-full">
-                  <div class="flex items-center justify-between">
-                    <div class="text-md text-grey-primary">
-                      Cleaner en route
+                <hr class="hr hr-dotted" />
+                <div class="text-sxm text-tertiary mt-2">Cleaner</div>
+                <div class="text-sm text-grey-primary">Kelechi Oguike</div>
+              </div>
+
+              <div class="relative flex gap-1 mt-4">
+                <div class="flex flex-col gap-08 items-center relative">
+                  <img
+                    src="assets/images/tick-check.svg"
+                    alt="Dot"
+                    class="img-fluid delivery-progress-tick-icon"
+                  />
+                  <div class="delivery-line d-1 absolute"></div>
+                  <img
+                    src="assets/images/tick-check.svg"
+                    alt="Dot"
+                    class="img-fluid delivery-progress-tick-icon"
+                  />
+                  <div class="delivery-line d-2 absolute"></div>
+                  <img
+                    src="assets/images/tick-check.svg"
+                    alt="Dot"
+                    class="img-fluid delivery-progress-tick-icon"
+                  />
+                  <div class="delivery-line d-3 absolute"></div>
+                  <img
+                    src="assets/images/tick-check.svg"
+                    alt="Dot"
+                    class="img-fluid delivery-progress-tick-icon"
+                  />
+                </div>
+                <div class="flex flex-col gap-7 w-full">
+                  <div class="flex flex-col gap-05 w-full">
+                    <div class="flex items-center justify-between">
+                      <div class="text-md text-grey-primary">
+                        Cleaning completed
+                      </div>
+                      <div class="text-tertiary text-sxm">4:01 PM</div>
                     </div>
-                    <div class="text-tertiary text-sxm">12:22 PM</div>
+                    <div class="text-primary text-sm">Give feedback.</div>
                   </div>
-                  <div class="text-tertiary text-sm">
-                    Your cleaner is on the way to your location!
+                  <div class="flex flex-col gap-05 w-full">
+                    <div class="flex items-center justify-between">
+                      <div class="text-md text-grey-primary">
+                        Cleaning started
+                      </div>
+                      <div class="text-tertiary text-sxm">10:56 AM</div>
+                    </div>
+                    <div class="text-tertiary text-sm">
+                      Your cleaner has started cleaning.
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-05 w-full">
+                    <div class="flex items-center justify-between">
+                      <div class="text-md text-grey-primary">
+                        Cleaner has arrived
+                      </div>
+                      <div class="text-tertiary text-sxm">2:26 PM</div>
+                    </div>
+                    <div class="text-tertiary text-sm">
+                      Your cleaner has arrived at your location.
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-05 w-full">
+                    <div class="flex items-center justify-between">
+                      <div class="text-md text-grey-primary">
+                        Cleaner en route
+                      </div>
+                      <div class="text-tertiary text-sxm">12:22 PM</div>
+                    </div>
+                    <div class="text-tertiary text-sm">
+                      Your cleaner is on the way to your location!
+                    </div>
                   </div>
                 </div>
               </div>
@@ -354,5 +364,7 @@
         </div>
       </div>
     </main>
+
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

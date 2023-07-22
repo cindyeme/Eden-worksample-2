@@ -475,7 +475,7 @@ button:focus {
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1;
 }
 .nav-icon {
   width: 1.125rem;
@@ -581,10 +581,82 @@ input:focus {
 }
 
 /* Modal */
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 36, 27, 0.2);
+  backdrop-filter: blur(1px);
+  transition: transform 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+    opacity 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
 .modal-wrapper {
   border-radius: 1rem;
   background: var(--white);
   padding: 1.2rem 1rem;
+  max-width: 22.1875rem;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow-y: auto;
+  scrollbar-width: 4px;
+}
+.mw-1{
+  height: 35.625rem;
+}
+.mw-2{
+  height: 41rem;
+
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  animation: show 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+.hide-modal {
+  opacity: 0;
+  visibility: hidden;
+  animation: hide 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@keyframes hide {
+  from {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+  }
+}
+@media (max-width: 768px) {
+  .modal-wrapper {
+    width: 95%;
+  }
 }
 .close-icon {
   width: 1.75rem;
@@ -623,23 +695,25 @@ input:focus {
   border-radius: 1.5rem;
   transition: width 0.3s ease-in-out;
 }
-.d-0{
+.d-0 {
   top: 15px;
   height: 5rem;
 }
-.d-1,.d-2,.d-3{
+.d-1,
+.d-2,
+.d-3 {
   height: 3.25rem;
 }
-.d-1{
+.d-1 {
   top: 28px;
 }
-.d-2{
+.d-2 {
   top: 106px;
 }
-.d-3{
+.d-3 {
   top: 185px;
 }
-.close{
+.close {
   border: 0;
   background: transparent;
   cursor: pointer;
