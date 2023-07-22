@@ -1,12 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eden Services</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan - Eden</title>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+  </head>
+  <body>
+    <main class="main plan">
+      <div class="plan-wrapper flex flex-col gap-04">
+        <div class="flex items-center gap-12 mb-2">
+          <a href="services.html">
+            <img
+              src="/assets/images/back.svg"
+              alt="Back"
+              class="img-fluid back-icon"
+          /></a>
+          <h5 class="h5 text-grery-primary">Review your plan</h5>
+        </div>
+
+        <div class="flex justify-between mb-4 relative">
+          <div class="progress-bar absolute">
+            <div class="progress" data-done="70"></div>
+          </div>
+          <div class="flex flex-col gap-05 z-5">
+            <img
+              src="/assets/images/checked.svg"
+              alt="Sign up"
+              class="img-fluid progress-icon"
+            />
+            <div class="text-tertiary text-sxm">Sign up</div>
+          </div>
+          <div class="flex flex-col items-center gap-05 z-5">
+            <img
+              src="/assets/images/check-2.svg"
+              alt="Customize"
+              class="img-fluid progress-icon"
+            />
+            <div class="text-primary text-sxm">Customise</div>
+          </div>
+          <div class="flex flex-col items-center gap-05 z-5">
+            <img
+              src="/assets/images/check-3.svg"
+              alt="Pay"
+              class="img-fluid progress-icon"
+            />
+            <div class="text-tertiary text-sxm">Pay</div>
+          </div>
+          <div class="flex flex-col z-5">
+            <img
+              src="/assets/images/check-last.svg"
+              alt="Finish"
+              class="img-fluid progress-icon"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <h1 class="h1">Review your plan</h1>
+          <div class="text-md text-tertiary">
+            Here's a summary of your Eden life. Let me tell you, your life is
+            about to become waayyy easier.
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="text-black text-md">Your Plan Details</div>
+          <a href="services.html" class="text-primary text-sm text-right">
+            Add or Remove Services
+          </a>
+        </div>
+        <hr class="hr hr-quinary" />
+
+        <div class="plan-cards">
+          <!-- Food -->
+          <div class="plan-card plan-card-primary mt-2">
+            <div class="flex justify-between">
+              <div class="flex gap-1">
+                <img
+                  src="/assets/images/mini-dish-1.svg"
+                  alt="Food"
+                  class="plan-card-icon img-fluid"
+                />
+                <div class="flex flex-col gap-4">
+                  <div class="text-md text-grey-primary">Food</div>
+                  <div class="text-tertiary text-sm">₦27,000</div>
+                </div>
+              </div>
+              <div class="expand flex gap-1 c-pointer">
+                <div class="text-sm text-tertiary">Expand details</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M5.55566 7.77777L10.0001 12.2222L14.4446 7.77777"
+                    stroke="#8AA398"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- Laundry -->
+          <div class="plan-card plan-card-purple mt-2">
+            <div class="flex justify-between">
+              <div class="flex gap-1">
+                <img
+                  src="/assets/images/mini-basket.svg"
+                  alt="Laundry"
+                  class="plan-card-icon img-fluid"
+                />
+                <div class="flex flex-col gap-4">
+                  <div class="text-md text-grey-primary">Laundry</div>
+                  <div class="text-tertiary text-sm">₦27,000</div>
+                </div>
+              </div>
+              <div class="expand flex gap-1 c-pointer">
+                <div class="text-sm text-tertiary">Expand details</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M5.55566 7.77777L10.0001 12.2222L14.4446 7.77777"
+                    stroke="#8AA398"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- Cleaning -->
+          <div class="plan-card plan-card-orange mt-2">
+            <div class="flex justify-between">
+              <div class="flex gap-1">
+                <img
+                  src="/assets/images/mini-house.svg"
+                  alt="Cleaning"
+                  class="plan-card-icon img-fluid"
+                />
+                <div class="flex flex-col gap-4">
+                  <div class="text-md text-grey-primary">Cleaning</div>
+                  <div class="text-tertiary text-sm">₦27,000</div>
+                </div>
+              </div>
+              <div class="expand flex gap-1 c-pointer">
+                <div class="text-sm text-tertiary">Expand details</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M5.55566 7.77777L10.0001 12.2222L14.4446 7.77777"
+                    stroke="#8AA398"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- Beauty -->
+          <div class="plan-card plan-card-pink mt-2">
+            <div class="flex justify-between">
+              <div class="flex gap-1">
+                <img
+                  src="/assets/images/mini-beauty.svg"
+                  alt="Beauty"
+                  class="plan-card-icon img-fluid"
+                />
+                <div class="flex flex-col gap-4">
+                  <div class="text-md text-grey-primary">Beauty</div>
+                  <div class="text-tertiary text-sm">₦27,000</div>
+                </div>
+              </div>
+              <div class="expand flex gap-1 c-pointer">
+                <div class="text-sm text-tertiary">Expand details</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M5.55566 7.77777L10.0001 12.2222L14.4446 7.77777"
+                    stroke="#8AA398"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="hr hr-quinary" />
+
+        <div class="flex items-center justify-between">
+          <div class="text-black text-md">Start date</div>
+          <a href="services.html" class="text-primary text-sm text-right">
+            Choose your start date
+          </a>
+        </div>
+        <div class="info-card info-yellow">
+          <img
+            src="/assets/images/alert-circle.svg"
+            alt="Alert"
+            class="img-fluid alert-icon"
+          />
+          <div class="text-grey-primary text-sm">
+            Choose your start date to pay.
+          </div>
+        </div>
+
+        <hr class="hr hr-quinary" />
+
+        <div class="text-black text-md fw-700">Discount Code</div>
+
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-05">
+            <input
+              type="text"
+              name="discount_code"
+              class="form-control text-grey-primary text-sm pb-1"
+              value="247LOVE4U"
+            />
+            <div class="text-primary text-sxm">Code successfully applied.</div>
+          </div>
+          <button type="button" class="btn btn-outlined">Remove code</button>
+        </div>
+
+        <hr class="hr hr-quinary" />
+
+        <div class="flex items-center justify-between">
+          <div class="text-sm text-grey-primary">Subtotal</div>
+          <div class="text-sm text-grey-primary text-right">₦112,000.00</div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="text-sm text-grey-primary">
+            Discount applied (25% off)
+          </div>
+          <div class="text-sm text-primary text-right">- ₦28,000</div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="text-sm text-grey-primary">Total</div>
+          <div class="flex flex-col gap-05">
+            <div class="text-md text-grey-primary text-right fw-700">
+              ₦102,000.00
+            </div>
+            <div
+              class="text-right text-sxm text-tertiary"
+              style="width: 11.75rem"
+            >
+              This amount covers your subscription for the next 4 weeks.
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card info-quinary mb-2">
+          <img
+            src="/assets/images/info-circlee.svg"
+            alt="Alert"
+            class="img-fluid alert-icon"
+          />
+          <div class="text-grey-primary text-sm">
+            Your subscription amount for subsequent months will be ₦112,000.
+          </div>
+        </div>
+
+        <div class="btn-wrapper mt-4">
+          <a href="confetti.html" class="btn btn-primary text-md btn-lg w-full"
+            >View Laundry Frequency</a
+          >
+        </div>
+
+        <div class="mt-4 flex items-center justify-center">
+          <div class="text-sm text-grey-primary">
+            Not what you want?
+            <a href="confetti.html" class="underline text-primary">Customise your plan.</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
