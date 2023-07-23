@@ -669,7 +669,10 @@ input:focus {
     width: 95%;
   }
   .mw-2 {
-    height: 80%;
+    height: 85%;
+  }
+  .mw-1 {
+    height: 70%;
   }
 }
 .close-icon {
