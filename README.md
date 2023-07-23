@@ -8,7 +8,7 @@ Design Prototype & Spec: https://www.figma.com/file/9rss1i3NzevnGg4LU2jJ9f/Work-
 
 - HTML
 - CSS
-- JavaScript
+- Vanilla JavaScript
 
 ### Github Repository 
 

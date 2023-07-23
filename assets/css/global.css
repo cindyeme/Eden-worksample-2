@@ -35,6 +35,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -42,6 +46,9 @@ body {
   overflow-x: hidden;
   height: 100vh;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-font-smoothing: antialiased;
 }
 a {
   text-decoration: none;
@@ -60,10 +67,10 @@ a {
   gap: 1.25rem;
 }
 .gap-1 {
-  gap: 0.7rem /* 16px */;
+  gap: 0.7rem;
 }
 .gap-2 {
-  gap: 0.85rem /* 16px */;
+  gap: 0.85rem;
 }
 .gap-05 {
   gap: 0.5rem;
@@ -119,6 +126,9 @@ a {
 }
 .z-5 {
   z-index: 5;
+}
+.hidden{
+  display: none;
 }
 .text-md {
   font-family: var(--Sans);
@@ -318,7 +328,7 @@ button:focus {
 .services,
 .plan {
   padding: 1rem 0 5rem 0;
-  /* overflow-x: hidden; */
+  overflow: hidden;
 }
 .services-wrapper,
 .plan-wrapper {
@@ -594,8 +604,8 @@ input:focus {
   height: 100%;
   background: rgba(15, 36, 27, 0.2);
   backdrop-filter: blur(1px);
-  transition: transform 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946),
-    opacity 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+  /* transition: transform 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+    opacity 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946); */
 }
 .modal-wrapper {
   border-radius: 1rem;
@@ -609,15 +619,16 @@ input:focus {
   left: 0;
   right: 0;
   margin: auto;
+}
+.mw-1 {
+  height: 35.625rem;
   overflow-y: auto;
   scrollbar-width: 4px;
 }
-.mw-1{
-  height: 35.625rem;
-}
-.mw-2{
+.mw-2 {
   height: 41rem;
-
+  overflow-y: auto;
+  scrollbar-width: 4px;
 }
 .show-modal {
   opacity: 1;
@@ -628,7 +639,7 @@ input:focus {
   from {
     opacity: 0;
     visibility: hidden;
-    transform: scale(0);
+    transform: scale(0.7);
   }
   to {
     opacity: 1;
@@ -650,12 +661,15 @@ input:focus {
   to {
     opacity: 0;
     visibility: hidden;
-    transform: scale(0);
+    transform: scale(0.7);
   }
 }
 @media (max-width: 768px) {
   .modal-wrapper {
     width: 95%;
+  }
+  .mw-2 {
+    height: 80%;
   }
 }
 .close-icon {
