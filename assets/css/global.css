@@ -79,7 +79,7 @@ a {
   gap: 1.75rem;
 }
 .gap-8 {
-  gap: 2.5rem;
+  gap: 1.4rem;
 }
 .gap-08 {
   gap: 3.2rem;
@@ -672,7 +672,7 @@ input:focus {
     height: 88%;
   }
   .mw-1 {
-    height: 80%;
+    height: 85%;
   }
 }
 .close-icon {
